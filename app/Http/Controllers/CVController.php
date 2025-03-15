@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCVRequest;
 use App\Models\CV;
 use App\Services\FileUploadService;
-use Illuminate\Container\Attributes\Storage;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades;
 use Illuminate\Support\Facades\Storage as FacadesStorage;
 
 use function PHPUnit\Framework\returnSelf;
