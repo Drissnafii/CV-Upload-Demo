@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cvs', function (Blueprint $table) {
+        Schema::create('resumes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('file_name');
-            $table->string('file_size');
             $table->string('file_path');
-            $table->string('mime_type');
+            $table->string('file_size');
+            $table->string('file_name');
             $table->timestamps();
+
+            $table->foreignId('user_id')->constrained();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('c_v_s');
+        Schema::dropIfExists('resumes');
     }
 };
